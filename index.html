@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta name="description" content="繁简从心" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> 嵌入式博客苑</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
+    <main class="content on">
+      
+<section class="cover">
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover9.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">嵌入式博客苑</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['面朝大海，春暖花开', '愿你一生努力，一生被爱', '想要的都拥有，得不到的都释怀'],
+        startDelay: 0,
+        typeSpeed: 200,
+        loop: true,
+        backSpeed: 100,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
+<div id="main">
+  <section class="outer">
+  
+  
+  
+
+<div class="notice" style="margin-top:50px">
+    <i class="ri-heart-fill"></i>
+    <div class="notice-content" id="broad"></div>
+</div>
+<script type="text/javascript">
+    fetch('https://v1.hitokoto.cn')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("broad").innerHTML = data.hitokoto;
+        })
+        .catch(console.error)
+</script>
+
+<style>
+    .notice {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+    }
+
+    .notice i {
+        float: left;
+        color: #999;
+        font-size: 16px;
+        padding-right: 10px;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+
+    .notice-content {
+        display: initial;
+        vertical-align: middle;
+    }
+</style>
+  
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-hello-world"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/12/07/hello-world/"
+    >Hello World</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/12/07/hello-world/" class="article-date">
+  <time datetime="2022-12-07T04:48:55.660Z" itemprop="datePublished">2022-12-07</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-全志F1C100S-F1C200S学习笔记（2）——TF-SD卡分区及系统构建烧录"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/01/09/%E5%85%A8%E5%BF%97F1C100S-F1C200S%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%882%EF%BC%89%E2%80%94%E2%80%94TF-SD%E5%8D%A1%E5%88%86%E5%8C%BA%E5%8F%8A%E7%B3%BB%E7%BB%9F%E6%9E%84%E5%BB%BA%E7%83%A7%E5%BD%95/"
+    >全志F1C100S/F1C200S学习笔记（2）——TF/SD卡分区及系统构建烧录</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/01/09/%E5%85%A8%E5%BF%97F1C100S-F1C200S%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%882%EF%BC%89%E2%80%94%E2%80%94TF-SD%E5%8D%A1%E5%88%86%E5%8C%BA%E5%8F%8A%E7%B3%BB%E7%BB%9F%E6%9E%84%E5%BB%BA%E7%83%A7%E5%BD%95/" class="article-date">
+  <time datetime="2022-01-09T09:01:03.000Z" itemprop="datePublished">2022-01-09</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="TF卡分区"><a href="#TF卡分区" class="headerlink" title="TF卡分区"></a>TF卡分区</h1><div class="footnotes"><hr><ol><li id="fn:wx" =>
+
+<p>在TF卡上构建系统之前，需要将TF卡进行分区与格式化；</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">sudo fdisk -l     		<span class="comment"># 首先查看电脑上已插入的TF卡的设备号（一般为 /dev/sdb1,下面以/dev/sdb1为例）</span></span><br><span class="line">sudo umount /dev/sdb1 	<span class="comment"># 若自动挂载了TF设备，请先卸载(有多个分区则全部卸载)</span></span><br><span class="line">sudo fdisk /dev/sdb   	<span class="comment"># 进行分区操作</span></span><br><span class="line"><span class="comment">##### 操作步骤如下 #####</span></span><br><span class="line"><span class="comment"># 若已存分区即按 d 删除各个分区</span></span><br><span class="line"><span class="comment"># 通过 n 新建分区，第一分区暂且申请为16M(f1c100s)、32M(v3s)，剩下的空间都给第二分区</span></span><br><span class="line">	<span class="comment"># 第一分区操作：n p 1 2048 +16M</span></span><br><span class="line">		<span class="comment"># p 主分区、默认 1 分区、默认2048、+16M</span></span><br><span class="line">	<span class="comment"># 第二分区操作：n 后面全部回车默认即可</span></span><br><span class="line">		<span class="comment"># p 主分区、默认 2 分区、默认2048、默认剩下的全部空间</span></span><br><span class="line"><span class="comment"># w 保存写入并退出</span></span><br><span class="line"><span class="comment"># p 查询分区表确定是否分区成功</span></span><br><span class="line"><span class="comment">########################</span></span><br><span class="line"></span><br><span class="line">sudo mkfs.vfat /dev/sdb1 <span class="comment"># 将第一分区格式化成FAT</span></span><br><span class="line">sudo mkfs.ext4 /dev/sdb2 <span class="comment"># 将第一分区格式化成EXT4</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 格式说明</span></span><br><span class="line">	<span class="comment"># EXT4：只用于Linux系统的内部磁盘</span></span><br><span class="line">	<span class="comment"># NTFS：与Windows共用的磁盘</span></span><br><span class="line">	<span class="comment"># FAT：所有系统和设备共用的侧畔</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意： 如果写入文件系统报错：<code>umount: /dev/sdb2: not mounted</code>，则是TF卡未格式化。<br>之前使用的2G的TF卡，发现格式化成<code>ext4</code>格式显示成功，但是无法使用，<code>fat</code>格式可以用。<br>打开该分区报错如图：<br><img src="/.com//A.png" alt="A"><br>不要怀疑其他的，这个卡无法格式化成<code>ext4</code>格式使用，我换了另外一张32G的卡同样操作没问题。</p>
+</blockquote>
+<p><img src="/.com//B.png" alt="在这里插入图片描述"><br><img src="/.com//C.png" alt="在这里插入图片描述"></p>
+<h3 id="脚本实现："><a href="#脚本实现：" class="headerlink" title="脚本实现："></a>脚本实现：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建脚本</span></span><br><span class="line">vim create_partion.sh</span><br><span class="line"><span class="comment"># 给予权限</span></span><br><span class="line">chmod u+x create_partion.sh</span><br><span class="line"><span class="comment"># 执行脚本</span></span><br><span class="line">./create_partion.sh &lt;设备号&gt;</span><br><span class="line">例：./create_partion.sh /dev/sdb</span><br></pre></td></tr></table></figure>
+
+<p><code>create_partion.sh</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"><span class="comment"># PJW</span></span><br><span class="line"><span class="comment"># 创建TF卡分区表</span></span><br><span class="line"><span class="comment"># PJW</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除分区</span></span><br><span class="line">sudo umount <span class="string">&quot;<span class="variable">$1</span>&quot;</span>1</span><br><span class="line">sudo umount <span class="string">&quot;<span class="variable">$1</span>&quot;</span>2</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$11</span></span><br><span class="line">sudo fdisk <span class="variable">$1</span> &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">d</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">d</span></span><br><span class="line"><span class="string">2</span></span><br><span class="line"><span class="string">d</span></span><br><span class="line"><span class="string">3</span></span><br><span class="line"><span class="string">d</span></span><br><span class="line"><span class="string">4</span></span><br><span class="line"><span class="string">w</span></span><br><span class="line"><span class="string">p</span></span><br><span class="line"><span class="string">q</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">sync</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建两个分区</span></span><br><span class="line">sudo fdisk <span class="variable">$1</span> &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">n</span></span><br><span class="line"><span class="string">p</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">+32M</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">n</span></span><br><span class="line"><span class="string">p</span></span><br><span class="line"><span class="string">2</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">p</span></span><br><span class="line"><span class="string">w</span></span><br><span class="line"><span class="string">q</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 格式化两个分区</span></span><br><span class="line">sleep 2</span><br><span class="line">sudo partx -u <span class="string">&quot;<span class="variable">$1</span>&quot;</span></span><br><span class="line">sudo mkfs.vfat <span class="string">&quot;<span class="variable">$1</span>&quot;</span>1 &amp;&amp;\</span><br><span class="line">sudo mkfs.ext4 <span class="string">&quot;<span class="variable">$1</span>&quot;</span>2 </span><br><span class="line"><span class="keyword">if</span> [ $? -ne 0 ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span>  <span class="string">&quot;error in creating partitions&quot;</span></span><br><span class="line">    &gt;/dev/null 2&gt;&amp;1 &amp;&amp; <span class="built_in">exit</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h1 id="TF卡内容存放"><a href="#TF卡内容存放" class="headerlink" title="TF卡内容存放"></a>TF卡内容存放</h1><p><strong>第一分区</strong></p>
+<ul>
+<li>boot.scr</li>
+<li>zImage</li>
+<li>suniv-f1c100s-licheepi-nano.dtb</li>
+</ul>
+<p><strong>第二分区</strong></p>
+<ul>
+<li>根文件系统内容</li>
+</ul>
+<br>
+
+<h1 id="分区及烧录脚本"><a href="#分区及烧录脚本" class="headerlink" title="分区及烧录脚本"></a>分区及烧录脚本</h1><p>具体分区操作参考github上的 <a target="_blank" rel="noopener" href="https://github.com/Zepan/ilichee/tree/master/%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6/%E9%95%9C%E5%83%8F%E7%83%A7%E5%86%99">write_all.sh</a> 脚本，该处有所有的烧录脚本参考。</p>
+<p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1smzuGS9">Nano一键快速烧录镜像包地址</a> （包含各种资料、SDK、镜像、烧录脚本等）</p>
+<p><strong>分区操作脚本：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">write_all.sh — 为tf卡创建全套内容`使用：write_all.sh /dev/sdX (sdX修改为tf设备号)`</span><br><span class="line">write_flash.sh — 为spi-flash写入全套内容</span><br><span class="line">write_dd.sh — 以dd镜像的方式写入全套内容（规定了分区信息）（生成方式见下一节）</span><br><span class="line">write_boot.sh — 向tf卡dd进Uboot</span><br><span class="line">write_mkfs.sh — 单纯的为两个分区进行硬盘格式化</span><br><span class="line">write_p1.sh — 单纯的向第一分区写入设备树内核等</span><br><span class="line">write_p2.sh — 单纯的向第二分区写入rootfs</span><br><span class="line">clear_partion.sh — 擦除分区表</span><br><span class="line">write_partion.sh — 写入分区表</span><br><span class="line">write_swap.sh — 增加swap</span><br></pre></td></tr></table></figure>
+<p><strong>镜像生成 脚本：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 镜像生成最简单的方法是借助tf卡，手动或使用脚本向tf写入完结构，再dd出来</span></span><br><span class="line"><span class="comment"># 能够判断镜像大小是否符合启动要求，且借助loop模拟创建设备，快速高效。</span></span><br><span class="line"><span class="comment"># 生成的镜像在 ./image 目录下</span></span><br><span class="line">sh pack_tf_img.sh — 生成TF卡镜像</span><br><span class="line">sh pack_flash_img.sh — 生成SPI-FLASH镜像</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h1 id="自建脚本-分区及烧录"><a href="#自建脚本-分区及烧录" class="headerlink" title="自建脚本[分区及烧录]"></a>自建脚本[分区及烧录]</h1><p>将<code>program</code>文件夹放在<code>uboot</code>、<code>linux</code>、<code>buildroot</code>同级目录。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod -R 777 program/</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">./configs/cp_files.sh				<span class="comment"># 拷贝uboot、kernel、dtb、rootfs、boot.scr</span></span><br><span class="line">./create_partion.sh					<span class="comment"># 建立分区</span></span><br><span class="line"></span><br><span class="line">./p-tf/write_uboot.sh /dev/sdb		<span class="comment"># 烧录uboot</span></span><br><span class="line">./p-tf/write_partion1.sh /dev/sdb	<span class="comment"># 烧录分区一</span></span><br><span class="line">./p-tf/write_partion2.sh /dev/sdb	<span class="comment"># 烧录分区二</span></span><br></pre></td></tr></table></figure>
+
+
+<br>
+
+<h1 id="附：fdisk操作参数表："><a href="#附：fdisk操作参数表：" class="headerlink" title="附：fdisk操作参数表："></a>附：<code>fdisk</code>操作参数表：</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">DOS (MBR)</span><br><span class="line"> a   开关 可启动 标志</span><br><span class="line"> b   编辑嵌套的 BSD 磁盘标签</span><br><span class="line"> c   开关 dos 兼容性标志</span><br><span class="line"></span><br><span class="line">常规</span><br><span class="line"> d   删除分区</span><br><span class="line"> F   列出未分区的空闲区</span><br><span class="line"> l   列出已知分区类型</span><br><span class="line"> n   添加新分区</span><br><span class="line"> p   打印分区表</span><br><span class="line"> t   更改分区类型</span><br><span class="line"> v   检查分区表</span><br><span class="line"> i   打印某个分区的相关信息</span><br><span class="line"></span><br><span class="line">杂项</span><br><span class="line"> m   打印此菜单</span><br><span class="line"> u   更改 显示/记录 单位</span><br><span class="line"> x   更多功能(仅限专业人员)</span><br><span class="line"></span><br><span class="line">脚本</span><br><span class="line"> I   从 sfdisk 脚本文件加载磁盘布局</span><br><span class="line"> O   将磁盘布局转储为 sfdisk 脚本文件</span><br><span class="line"></span><br><span class="line">保存并退出</span><br><span class="line"> w   将分区表写入磁盘并退出</span><br><span class="line"> q   退出而不保存更改</span><br><span class="line"></span><br><span class="line">新建空磁盘标签</span><br><span class="line"> g   新建一份 GPT 分区表</span><br><span class="line"> G   新建一份空 GPT (IRIX) 分区表</span><br><span class="line"> o   新建一份的空 DOS 分区表</span><br><span class="line"> s   新建一份空 Sun 分区表</span><br></pre></td></tr></table></figure>
+</li></ol></div> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-全志F1C100S-F1C200S学习笔记（1）——基础简介及资料"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/01/09/%E5%85%A8%E5%BF%97F1C100S-F1C200S%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%AE%80%E4%BB%8B%E5%8F%8A%E8%B5%84%E6%96%99/"
+    >全志F1C100S/F1C200S学习笔记（1）——基础简介及资料</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/01/09/%E5%85%A8%E5%BF%97F1C100S-F1C200S%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%AE%80%E4%BB%8B%E5%8F%8A%E8%B5%84%E6%96%99/" class="article-date">
+  <time datetime="2022-01-09T07:12:07.000Z" itemprop="datePublished">2022-01-09</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="资料："><a href="#资料：" class="headerlink" title="资料："></a>资料：</h1><p><a target="_blank" rel="noopener" href="http://cn.dl.sipeed.com/shareURL/LICHEE">荔枝派资料下载站</a><br><a target="_blank" rel="noopener" href="https://eyun.baidu.com/s/3i6FbQzr?errmsg=Auth%20Login%20Sucess&errno=0&ssnerror=0&#sharelink/parent_path=/%E6%B7%B1%E5%9C%B3%E7%9F%BD%E9%80%9F%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&path=/%E4%B8%8B%E8%BD%BD%E7%AB%99%E6%96%87%E4%BB%B6/LICHEE">荔枝派资料下载站 | 百度云</a><br><a target="_blank" rel="noopener" href="https://cn.bbs.sipeed.com/">荔枝派中文论坛</a><br><a target="_blank" rel="noopener" href="https://github.com/Zepan/ilichee">荔枝派DIY-github资料</a><br><a target="_blank" rel="noopener" href="http://nano.lichee.pro/index.html">荔枝派Nano 全流程指南</a><br><a target="_blank" rel="noopener" href="https://mangopi.org/mangopi_r">芒果派</a><br><a target="_blank" rel="noopener" href="https://whycan.com/f_17.html">坑网</a>  </p>
+<p>仓库：<br><a target="_blank" rel="noopener" href="https://github.com/lichee-pi">lichee-pi</a><br><a target="_blank" rel="noopener" href="https://gitee.com/LicheePiNano">LicheePiNano</a><br><a target="_blank" rel="noopener" href="https://github.com/Icenowy">Icenowy</a>  </p>
+<br>
+
+<h1 id="芯片概览"><a href="#芯片概览" class="headerlink" title="芯片概览"></a>芯片概览</h1><p><img src="/.com//%E8%8A%AF%E7%89%87%E6%A6%82%E8%A7%88.png" alt="芯片概览"></p>
+<br>
+
+<h1 id="芯片框图"><a href="#芯片框图" class="headerlink" title="芯片框图"></a>芯片框图</h1><p><img src="/.com//%E8%8A%AF%E7%89%87%E6%A1%86%E5%9B%BE.png" alt="芯片框图"></p>
+<br>
+
+<h1 id="芯片规格"><a href="#芯片规格" class="headerlink" title="芯片规格"></a>芯片规格</h1><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CPU</td>
+<td>ARM9 CPU architecture<br>16KByte D-Cache<br>32KByte I-Cache</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>SIP 64MB DDR1<br>SD2.0, eMMC 4.41</td>
+</tr>
+<tr>
+<td>Video</td>
+<td>H.264 1920x1080@30fps decoding<br>MPEG1/2/4 1920x1080@30fps decoding<br>MJPEG 1280x720@30fps encoding<br>JPEG encode size up to 8192x8192</td>
+</tr>
+<tr>
+<td>Camera</td>
+<td>8-bit CMOS-sensor interface<br>CCIR656 protocol for NTSC and PAL</td>
+</tr>
+<tr>
+<td>Audio</td>
+<td>Integrated analog audio codec with two DAC channels and one ADC channel,maximum 192kHz DAC sample rate and 48kHz ADC sample rate<br>One I2S/PCM interface</td>
+</tr>
+<tr>
+<td>Display</td>
+<td>LCD RGB interface up to 1280x720@60fps<br>TV CVBS output, support NTSC/PAL, with auto plug detecting</td>
+</tr>
+<tr>
+<td>Connectivity</td>
+<td>USB OTG, SDIO,IR, 3 x TWI, 2 x SPI, 3 x UART</td>
+</tr>
+<tr>
+<td>OS</td>
+<td>Melis, Linux OS</td>
+</tr>
+<tr>
+<td>Package</td>
+<td>QFN88, 10mm x 10mm</td>
+</tr>
+<tr>
+<td>Process</td>
+<td>40nm</td>
+</tr>
+<tr>
+<td>特点</td>
+<td>支持H.264 1920x1080@30fps 解码<br>支持MJPEG 1280x720@30fps 编码<br>集成 64MB DDR1,集成音频CODEC<br>低成本，低功耗，开发简单</td>
+</tr>
+</tbody></table>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+  </article>
+  
+
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2015-2022
+        <i class="ri-heart-fill heart_icon"></i> JavonPeng
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="嵌入式博客苑"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>
