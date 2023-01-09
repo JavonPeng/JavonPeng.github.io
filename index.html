@@ -16,16 +16,16 @@
       <title> 嵌入式博客苑</title>
   <meta name="generator" content="hexo-theme-ayer">
       
-      <link rel="shortcut icon" href="/favicon.ico" />
+      <link rel="shortcut icon" href="/favicon.png" />
        
-<link rel="stylesheet" href="/project/dist/main.css">
+<link rel="stylesheet" href="/dist/main.css">
 
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
       />
       
-<link rel="stylesheet" href="/project/css/custom.css">
+<link rel="stylesheet" href="/css/custom.css">
  
       <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
        
@@ -65,7 +65,7 @@
       <img src="/images/cover9.jpg" alt="image frame" />
     </div>
     <div class="cover-inner text-center text-white">
-      <h1><a href="/project/">嵌入式博客苑</a></h1>
+      <h1><a href="/">嵌入式博客苑</a></h1>
       <div id="subtitle-box">
         
         <span id="subtitle"></span>
@@ -166,7 +166,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/project/2022/12/07/hello-world/"
+  <a class="article-title" href="/2022/12/07/hello-world/"
     >Hello World</a> 
 </h2>
  
@@ -175,7 +175,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/project/2022/12/07/hello-world/" class="article-date">
+      <a href="/2022/12/07/hello-world/" class="article-date">
   <time datetime="2022-12-07T04:48:55.660Z" itemprop="datePublished">2022-12-07</time>
 </a>    
     </div>
@@ -226,7 +226,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/project/2022/01/09/%E5%85%A8%E5%BF%97F1C100S-F1C200S%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%882%EF%BC%89%E2%80%94%E2%80%94TF-SD%E5%8D%A1%E5%88%86%E5%8C%BA%E5%8F%8A%E7%B3%BB%E7%BB%9F%E6%9E%84%E5%BB%BA%E7%83%A7%E5%BD%95/"
+  <a class="article-title" href="/2022/01/09/%E5%85%A8%E5%BF%97F1C100S-F1C200S%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%882%EF%BC%89%E2%80%94%E2%80%94TF-SD%E5%8D%A1%E5%88%86%E5%8C%BA%E5%8F%8A%E7%B3%BB%E7%BB%9F%E6%9E%84%E5%BB%BA%E7%83%A7%E5%BD%95/"
     >全志F1C100S/F1C200S学习笔记（2）——TF/SD卡分区及系统构建烧录</a> 
 </h2>
  
@@ -235,7 +235,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/project/2022/01/09/%E5%85%A8%E5%BF%97F1C100S-F1C200S%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%882%EF%BC%89%E2%80%94%E2%80%94TF-SD%E5%8D%A1%E5%88%86%E5%8C%BA%E5%8F%8A%E7%B3%BB%E7%BB%9F%E6%9E%84%E5%BB%BA%E7%83%A7%E5%BD%95/" class="article-date">
+      <a href="/2022/01/09/%E5%85%A8%E5%BF%97F1C100S-F1C200S%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%882%EF%BC%89%E2%80%94%E2%80%94TF-SD%E5%8D%A1%E5%88%86%E5%8C%BA%E5%8F%8A%E7%B3%BB%E7%BB%9F%E6%9E%84%E5%BB%BA%E7%83%A7%E5%BD%95/" class="article-date">
   <time datetime="2022-01-09T09:01:03.000Z" itemprop="datePublished">2022-01-09</time>
 </a>    
     </div>
@@ -248,9 +248,9 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">sudo fdisk -l     		<span class="comment"># 首先查看电脑上已插入的TF卡的设备号（一般为 /dev/sdb1,下面以/dev/sdb1为例）</span></span><br><span class="line">sudo umount /dev/sdb1 	<span class="comment"># 若自动挂载了TF设备，请先卸载(有多个分区则全部卸载)</span></span><br><span class="line">sudo fdisk /dev/sdb   	<span class="comment"># 进行分区操作</span></span><br><span class="line"><span class="comment">##### 操作步骤如下 #####</span></span><br><span class="line"><span class="comment"># 若已存分区即按 d 删除各个分区</span></span><br><span class="line"><span class="comment"># 通过 n 新建分区，第一分区暂且申请为16M(f1c100s)、32M(v3s)，剩下的空间都给第二分区</span></span><br><span class="line">	<span class="comment"># 第一分区操作：n p 1 2048 +16M</span></span><br><span class="line">		<span class="comment"># p 主分区、默认 1 分区、默认2048、+16M</span></span><br><span class="line">	<span class="comment"># 第二分区操作：n 后面全部回车默认即可</span></span><br><span class="line">		<span class="comment"># p 主分区、默认 2 分区、默认2048、默认剩下的全部空间</span></span><br><span class="line"><span class="comment"># w 保存写入并退出</span></span><br><span class="line"><span class="comment"># p 查询分区表确定是否分区成功</span></span><br><span class="line"><span class="comment">########################</span></span><br><span class="line"></span><br><span class="line">sudo mkfs.vfat /dev/sdb1 <span class="comment"># 将第一分区格式化成FAT</span></span><br><span class="line">sudo mkfs.ext4 /dev/sdb2 <span class="comment"># 将第一分区格式化成EXT4</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 格式说明</span></span><br><span class="line">	<span class="comment"># EXT4：只用于Linux系统的内部磁盘</span></span><br><span class="line">	<span class="comment"># NTFS：与Windows共用的磁盘</span></span><br><span class="line">	<span class="comment"># FAT：所有系统和设备共用的侧畔</span></span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>注意： 如果写入文件系统报错：<code>umount: /dev/sdb2: not mounted</code>，则是TF卡未格式化。<br>之前使用的2G的TF卡，发现格式化成<code>ext4</code>格式显示成功，但是无法使用，<code>fat</code>格式可以用。<br>打开该分区报错如图：<br><img src="/project/.io//A.png" alt="A"><br>不要怀疑其他的，这个卡无法格式化成<code>ext4</code>格式使用，我换了另外一张32G的卡同样操作没问题。</p>
+<p>注意： 如果写入文件系统报错：<code>umount: /dev/sdb2: not mounted</code>，则是TF卡未格式化。<br>之前使用的2G的TF卡，发现格式化成<code>ext4</code>格式显示成功，但是无法使用，<code>fat</code>格式可以用。<br>打开该分区报错如图：<br><img src="/.com//A.png" alt="A"><br>不要怀疑其他的，这个卡无法格式化成<code>ext4</code>格式使用，我换了另外一张32G的卡同样操作没问题。</p>
 </blockquote>
-<p><img src="/project/.io//B.png" alt="在这里插入图片描述"><br><img src="/project/.io//C.png" alt="在这里插入图片描述"></p>
+<p><img src="/.com//B.png" alt="在这里插入图片描述"><br><img src="/.com//C.png" alt="在这里插入图片描述"></p>
 <h3 id="脚本实现："><a href="#脚本实现：" class="headerlink" title="脚本实现："></a>脚本实现：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建脚本</span></span><br><span class="line">vim create_partion.sh</span><br><span class="line"><span class="comment"># 给予权限</span></span><br><span class="line">chmod u+x create_partion.sh</span><br><span class="line"><span class="comment"># 执行脚本</span></span><br><span class="line">./create_partion.sh &lt;设备号&gt;</span><br><span class="line">例：./create_partion.sh /dev/sdb</span><br></pre></td></tr></table></figure>
 
 <p><code>create_partion.sh</code></p>
@@ -318,7 +318,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/project/2022/01/09/%E5%85%A8%E5%BF%97F1C100S-F1C200S%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%AE%80%E4%BB%8B%E5%8F%8A%E8%B5%84%E6%96%99/"
+  <a class="article-title" href="/2022/01/09/%E5%85%A8%E5%BF%97F1C100S-F1C200S%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%AE%80%E4%BB%8B%E5%8F%8A%E8%B5%84%E6%96%99/"
     >全志F1C100S/F1C200S学习笔记（1）——基础简介及资料</a> 
 </h2>
  
@@ -327,7 +327,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/project/2022/01/09/%E5%85%A8%E5%BF%97F1C100S-F1C200S%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%AE%80%E4%BB%8B%E5%8F%8A%E8%B5%84%E6%96%99/" class="article-date">
+      <a href="/2022/01/09/%E5%85%A8%E5%BF%97F1C100S-F1C200S%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%AE%80%E4%BB%8B%E5%8F%8A%E8%B5%84%E6%96%99/" class="article-date">
   <time datetime="2022-01-09T07:12:07.000Z" itemprop="datePublished">2022-01-09</time>
 </a>    
     </div>
@@ -338,10 +338,10 @@
 <p>仓库：<br><a target="_blank" rel="noopener" href="https://github.com/lichee-pi">lichee-pi</a><br><a target="_blank" rel="noopener" href="https://gitee.com/LicheePiNano">LicheePiNano</a><br><a target="_blank" rel="noopener" href="https://github.com/Icenowy">Icenowy</a>  </p>
 <br>
 
-<h1 id="芯片概览"><a href="#芯片概览" class="headerlink" title="芯片概览"></a>芯片概览</h1><p><img src="/project/.io//%E8%8A%AF%E7%89%87%E6%A6%82%E8%A7%88.png" alt="芯片概览"></p>
+<h1 id="芯片概览"><a href="#芯片概览" class="headerlink" title="芯片概览"></a>芯片概览</h1><p><img src="/.com//%E8%8A%AF%E7%89%87%E6%A6%82%E8%A7%88.png" alt="芯片概览"></p>
 <br>
 
-<h1 id="芯片框图"><a href="#芯片框图" class="headerlink" title="芯片框图"></a>芯片框图</h1><p><img src="/project/.io//%E8%8A%AF%E7%89%87%E6%A1%86%E5%9B%BE.png" alt="芯片框图"></p>
+<h1 id="芯片框图"><a href="#芯片框图" class="headerlink" title="芯片框图"></a>芯片框图</h1><p><img src="/.com//%E8%8A%AF%E7%89%87%E6%A1%86%E5%9B%BE.png" alt="芯片框图"></p>
 <br>
 
 <h1 id="芯片规格"><a href="#芯片规格" class="headerlink" title="芯片规格"></a>芯片规格</h1><table>
@@ -478,33 +478,29 @@
 <nav class="navbar">
   
   <div class="logo">
-    <a href="/project/"><img src="/images/ayer-side.svg" alt="嵌入式博客苑"></a>
+    <a href="/"><img src="/images/logo-side.svg" alt="嵌入式博客苑"></a>
   </div>
   
   <ul class="nav nav-main">
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/project/">主页</a>
+      <a class="nav-item-link" href="/">主页</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/project/archives">归档</a>
+      <a class="nav-item-link" href="/archives">归档</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/project/categories">分类</a>
+      <a class="nav-item-link" href="/categories">分类</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/project/tags">标签</a>
+      <a class="nav-item-link" href="/tags">标签</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/project/friends">友链</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/project/2019/about">关于我</a>
+      <a class="nav-item-link" href="/about">关于我</a>
     </li>
     
   </ul>
@@ -518,7 +514,7 @@
       </a>
       
       
-      <a class="nav-item-link" target="_blank" href="/project/atom.xml" title="RSS Feed">
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
         <i class="ri-rss-line"></i>
       </a>
       
@@ -544,9 +540,9 @@
   </div>
 </div>
     
-<script src="/project/js/jquery-3.6.0.min.js"></script>
+<script src="/js/jquery-3.6.0.min.js"></script>
  
-<script src="/project/js/lazyload.min.js"></script>
+<script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
 
@@ -557,7 +553,7 @@
 />
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
 
-<script src="/project/dist/main.js"></script>
+<script src="/dist/main.js"></script>
 
 <!-- ImageViewer -->
  <!-- Root element of PhotoSwipe. Must have class pswp. -->
@@ -672,7 +668,7 @@
 
 <!-- busuanzi  -->
  
-<script src="/project/js/busuanzi-2.3.pure.min.js"></script>
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
  
 <!-- ClickLove -->
 
@@ -680,11 +676,11 @@
 
 <!-- ClickBoom2 -->
  
-<script src="/project/js/clickBoom2.js"></script>
+<script src="/js/clickBoom2.js"></script>
  
 <!-- CodeCopy -->
  
-<link rel="stylesheet" href="/project/css/clipboard.css">
+<link rel="stylesheet" href="/css/clipboard.css">
  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script>
   function wait(callback, seconds) {
